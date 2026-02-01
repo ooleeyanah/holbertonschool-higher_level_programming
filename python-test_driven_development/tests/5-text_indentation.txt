@@ -1,0 +1,227 @@
+The ``5-text_indentation`` module
+==================================
+
+Using ``text_indentation``
+--------------------------
+
+This is a doctest file for the text_indentation function.
+
+First, import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with simple text containing periods:
+
+    >>> text_indentation("Hello. World.")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+Test with text containing question marks:
+
+    >>> text_indentation("How are you? Still alive?")
+    How are you?
+    <BLANKLINE>
+    Still alive?
+    <BLANKLINE>
+
+Test with text containing colons:
+
+    >>> text_indentation("Name: Uliana. Age: 26.")
+    Name:
+    <BLANKLINE>
+    Uliana.
+    <BLANKLINE>
+    Age:
+    <BLANKLINE>
+    26.
+    <BLANKLINE>
+
+Test with all three punctuation marks:
+
+    >>> text_indentation("Hello: How are you? I am fine.")
+    Hello:
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    I am fine.
+    <BLANKLINE>
+
+Test with spaces after punctuation (should be removed):
+
+    >>> text_indentation("Hello.   World.")
+    Hello.
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+    >>> text_indentation("Question?     Answer.")
+    Question?
+    <BLANKLINE>
+    Answer.
+    <BLANKLINE>
+
+    >>> text_indentation("Title:    Content.")
+    Title:
+    <BLANKLINE>
+    Content.
+    <BLANKLINE>
+
+Test with text without special punctuation:
+
+    >>> text_indentation("Hello World")
+    Hello World
+
+Test with empty string:
+
+    >>> text_indentation("")
+
+Test with only spaces:
+
+    >>> text_indentation("   ")
+       
+
+Test with only punctuation:
+
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
+
+    >>> text_indentation("?")
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation(":")
+    :
+    <BLANKLINE>
+
+Test with consecutive punctuation:
+
+    >>> text_indentation("End.?:")
+    End.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test with punctuation at the beginning:
+
+    >>> text_indentation(".Hello")
+    .
+    <BLANKLINE>
+    Hello
+
+    >>> text_indentation("?Hello")
+    ?
+    <BLANKLINE>
+    Hello
+
+    >>> text_indentation(":Hello")
+    :
+    <BLANKLINE>
+    Hello
+
+Test with multiple spaces after punctuation:
+
+    >>> text_indentation("Hello.     How are you?     Good.")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Good.
+    <BLANKLINE>
+
+Test with tabs and spaces after punctuation:
+
+    >>> text_indentation("Hello.	 World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Test with newlines in text:
+
+    >>> text_indentation("Hello.\nWorld")
+    Hello.
+    <BLANKLINE>
+    <BLANKLINE>
+    World
+
+Test with longer text:
+
+    >>> text_indentation("Lorem ipsum dolor sit amet. Consectetur adipiscing elit? Sed do eiusmod tempor: incididunt ut labore.")
+    Lorem ipsum dolor sit amet.
+    <BLANKLINE>
+    Consectetur adipiscing elit?
+    <BLANKLINE>
+    Sed do eiusmod tempor:
+    <BLANKLINE>
+    incididunt ut labore.
+    <BLANKLINE>
+
+ERROR CASES:
+
+Test text not a string - integer:
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Test text not a string - None:
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Test text not a string - list:
+
+    >>> text_indentation(["Hello", "World"])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Test text not a string - boolean:
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Test text not a string - float:
+
+    >>> text_indentation(3.14)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Test missing argument:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test with extra arguments:
+
+    >>> text_indentation("Hello", "World")
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test with special characters that are not punctuation:
+
+    >>> text_indentation("Hello! World@ Test#")
+    Hello! World@ Test#
+
+Test with numbers and punctuation:
+
+    >>> text_indentation("Version 1.0: Released. Is it good?")
+    Version 1.0:
+    <BLANKLINE>
+    Released.
+    <BLANKLINE>
+    Is it good?
+    <BLANKLINE>
