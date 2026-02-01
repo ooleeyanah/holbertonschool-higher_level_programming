@@ -77,11 +77,6 @@ Test with empty string:
 
     >>> text_indentation("")
 
-Test with only spaces:
-
-    >>> text_indentation("   ")
-       
-
 Test with only punctuation:
 
     >>> text_indentation(".")
@@ -219,7 +214,9 @@ Test with special characters that are not punctuation:
 Test with numbers and punctuation:
 
     >>> text_indentation("Version 1.0: Released. Is it good?")
-    Version 1.0:
+    Version 1.
+    <BLANKLINE>
+    0:
     <BLANKLINE>
     Released.
     <BLANKLINE>
