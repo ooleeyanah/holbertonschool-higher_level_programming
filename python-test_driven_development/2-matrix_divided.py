@@ -37,7 +37,8 @@ def matrix_divided(matrix, div):
         [[1.0, 2.0], [3.0, 4.0]]
     """
     # Error message for matrix type validation
-    type_error_msg = "matrix must be a matrix (list of lists) of integers/floats"
+    type_error_msg = ("matrix must be a matrix (list of lists) of "
+                      "integers/floats")
 
     # Check if matrix is a list
     if not isinstance(matrix, list):
