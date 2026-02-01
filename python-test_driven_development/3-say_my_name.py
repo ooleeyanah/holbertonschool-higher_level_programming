@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+"""
+This module provides a function to print names in a formatted way.
+
+The module contains a function that takes a first name and optional last name
+and prints them in the format "My name is <first_name> <last_name>".
+It includes type checking to ensure both parameters are strings.
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """Prints My name is <first name> <last name>
 
