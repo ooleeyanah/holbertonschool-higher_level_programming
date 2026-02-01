@@ -22,7 +22,7 @@ def print_square(size):
     Returns:
         None
     """
-    if not isinstance(size, int):
+    if not isinstance(size, int) or isinstance(size, bool):
         if isinstance(size, float) and size < 0:
             raise TypeError("size must be an integer")
         raise TypeError("size must be an integer")
