@@ -5,7 +5,7 @@ This module contains the basic implementation of a Square class.
 """
 
 
-class square:
+class Square:
     """
     A class that represents a square.
     
