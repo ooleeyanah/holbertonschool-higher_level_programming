@@ -19,5 +19,3 @@ class Square:
         None currently defined.
     """
     pass
-
-
