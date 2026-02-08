@@ -109,4 +109,4 @@ class Rectangle:
         Delete rectangle with a bittersweet goodbye.
 
         """
-    print("Bye rectangle...")
+        print("Bye rectangle...")
