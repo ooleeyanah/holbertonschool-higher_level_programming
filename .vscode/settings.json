@@ -47,7 +47,7 @@
     "editor.parameterHints.enabled": false,
     
     // Disable hover information
-    "editor.hover.enabled": false,
+    "editor.hover.enabled": "off",
     
     // Disable signature help
     "editor.signatureHelp.enabled": false,
@@ -98,7 +98,7 @@
     "editor.showFoldingControls": "never",
     
     // Disable lightbulb (code actions)
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     
     // Disable code lens
     "editor.codeLens": false,
