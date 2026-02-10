@@ -19,7 +19,7 @@ class BaseGeometry:
         Validates integer greater than zero.
         """
         if not isinstance(value, int):
-            raise TypeError("<name> must be an integer")
+            raise TypeError("name must be an integer")
         if value < 0:
-            raise ValueError("<name> must be >= 0")
+            raise ValueError("name must be >= 0")
         self.name = value
