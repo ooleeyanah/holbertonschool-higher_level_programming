@@ -24,4 +24,4 @@ class Square(Rectangle):
         Returns the square description.
 
         """
-        return "[Square] {}/{}".format(self.__width, self.__height)
+        return "[Square] {}/{}".format(self.__size, self.__size)
