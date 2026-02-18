@@ -9,7 +9,7 @@ class Animal(ABC):
     """
     Defines Animal class for abstract methods.
     """
-    
+
     @abstractmethod
     def sound(self):
         """
@@ -19,12 +19,12 @@ class Animal(ABC):
 
 class Dog(Animal):
     """Dog class that inherits from Animal."""
-    
+
     def sound(self):
         return "Bark"
 
 class Cat(Animal):
     """Cat class that inherits from Animal."""
-    
+
     def sound(self):
         return "Meow"
