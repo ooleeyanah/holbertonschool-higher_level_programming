@@ -19,4 +19,4 @@ class Student:
 
     def to_json(self):
         """ Public method to retrieve dict rep of Student. """
-        return Student.__dict__
+        return self.__dict__
