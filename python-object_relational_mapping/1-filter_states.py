@@ -25,7 +25,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute query to select all states ordered by id
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' COLLATE Latin1_General_CS_AS ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
     # Fetch all results
     results = cursor.fetchall()
