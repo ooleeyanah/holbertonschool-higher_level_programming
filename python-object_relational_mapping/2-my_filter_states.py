@@ -26,7 +26,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute query to select all states ordered by id
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+    cursor.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC"
                    .format(state_name_searched))
 
     # Fetch all results
