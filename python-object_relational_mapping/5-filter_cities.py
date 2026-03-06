@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     # Execute query to select all states ordered by id
     cursor.execute("SELECT cities.name FROM cities LEFT JOIN states "
-                    "ON cities.state_id = states.id WHERE states.name = %s "
+                   "ON cities.state_id = states.id WHERE states.name = %s "
                    "ORDER BY cities.id ASC", (state_name_searched,))
 
     # Fetch all results
