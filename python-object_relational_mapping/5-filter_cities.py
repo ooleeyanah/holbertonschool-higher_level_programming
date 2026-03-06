@@ -34,8 +34,8 @@ if __name__ == "__main__":
     results = cursor.fetchall()
 
     # Display results
-    for row in results:
-        print(row)
+    city_names = [row[0] for row in results]
+    print(", ".join(city_names))
 
     # Close cursor and database connection
     cursor.close()
