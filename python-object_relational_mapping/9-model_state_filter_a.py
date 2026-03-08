@@ -22,14 +22,15 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query for states with letter a
-    state_a = session.query(State).filter(State.name.like('%a'))
+    # Execute for a on all
+    states_with_a = session.query(State).filter(State.name.like('%a%')).all()
 
-    # Display results
-    if state_a is None:
-        print("Nothing")
+    # Check if any results and iterate
+    if not states_with_a:
+        print("Nothing") 
     else:
-        print(f"{state_a.id}: {state_a.name}")
+        for state in states_with_a:
+            print("{}: {}".format(state.id, state.name))
 
     # Close session
     session.close()
