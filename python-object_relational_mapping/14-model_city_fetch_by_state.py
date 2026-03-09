@@ -24,7 +24,10 @@ if __name__ == "__main__":
     session = Session()
 
     # Query all Cities ordered by id asc
-    results = session.query(State, City).join(City, State.id == City.state_id).order_by(City.id).all()
+    results = (session.query(State, City)
+               .join(City, State.id == City.state_id)
+               .order_by(City.id)
+               .all())
 
     # Display results
     for state, city in results:
