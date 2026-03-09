@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # Update object name
     for state in delete_state:
         session.delete(state)
-        
+
     session.commit()
 
     # Close session
