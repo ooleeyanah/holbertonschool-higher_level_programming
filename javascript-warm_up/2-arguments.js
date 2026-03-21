@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
     if (args.length === 0) {
         console.log('No argument');
     } else if (args.length === 1) {
