@@ -6,5 +6,5 @@ function numOfArgs(...args) {
         console.log('Argument found');
     } else {
         console.log('Arguments found');
-    };
+    }
 }
