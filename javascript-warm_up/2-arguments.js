@@ -1,5 +1,4 @@
-#!/usr/bin/node
-function numOfArgs(...args) {
+#!/usr/bin/env node
     if (args.length === 0) {
         console.log('No argument');
     } else if (args.length === 1) {
@@ -7,4 +6,3 @@ function numOfArgs(...args) {
     } else {
         console.log('Arguments found');
     }
-}
