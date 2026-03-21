@@ -8,3 +8,4 @@ function numOfArgs(...args) {
         console.log('Arguments found');
     }
 }
+numOfArgs();
